@@ -18,16 +18,20 @@ getRout() {
       GoRoute(
         path: '/',
         builder: (context, state) => const HomeScreen(),
+        routes: [
+          GoRoute(
+              path: 'page1',
+              builder: (context, state) => FirstScreen(
+                  name: state.extra != null ? state.extra! : "First Screen"),
+              routes: [
+                GoRoute(
+                  path: 'page2',
+                  builder: (context, state) => const SacondScreen(),
+                ),]
+          ),
+        ]
       ),
-      GoRoute(
-        path: '/page1',
-        builder: (context, state) => FirstScreen(
-            name: state.extra != null ? state.extra! : "First Screen"),
-      ),
-      GoRoute(
-        path: '/page2',
-        builder: (context, state) => const SacondScreen(),
-      ),
+
       GoRoute(
         path: '/page3',
         builder: (context, state) => const ThirdScreen(),

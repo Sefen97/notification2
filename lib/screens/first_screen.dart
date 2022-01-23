@@ -21,7 +21,7 @@ class _FirstScreenState extends State<FirstScreen> {
           children: [
             ElevatedButton(
                 onPressed: () {
-                  context.go("/page2");
+                  context.go("/page1/page2");
                 },
                 child: const Text("Sacond screen")),
             const SizedBox(
@@ -47,7 +47,7 @@ class _FirstScreenState extends State<FirstScreen> {
         centerTitle: true,
         leading: IconButton(
           onPressed: () {
-            context.go('/');
+            context.pop();
           },
           icon: const Icon(Icons.arrow_back),
         ),
