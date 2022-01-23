@@ -18,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            context.go('/page1');
+            context.go('/page1', extra: "First Screen");
           },
           child: const Text("First Screen "),
         ),

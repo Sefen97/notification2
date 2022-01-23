@@ -21,7 +21,8 @@ getRout() {
       ),
       GoRoute(
         path: '/page1',
-        builder: (context, state) => const FirstScreen(),
+        builder: (context, state) => FirstScreen(
+            name: state.extra != null ? state.extra! : "First Screen"),
       ),
       GoRoute(
         path: '/page2',
