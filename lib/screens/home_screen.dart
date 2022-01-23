@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -11,13 +12,15 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(appBar: AppBar(
+      centerTitle: true,
+      title:const   Text("Home Screen"),),
       body: Center(
         child: ElevatedButton(
           onPressed: () {
             context.go('/page1');
           },
-          child: const Text("Test"),
+          child: const Text("First Screen "),
         ),
       ),
     );

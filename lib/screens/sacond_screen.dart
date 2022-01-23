@@ -14,6 +14,7 @@ class _SacondScreenState extends State<SacondScreen> {
     return Scaffold(
       body:  const Center(child:  Text("Secondo screen")),
       appBar: AppBar(
+        centerTitle: true,
         leading: IconButton(onPressed: (){
           context.go('/page1');
         },icon:const  Icon(Icons.arrow_back),),

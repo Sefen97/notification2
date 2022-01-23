@@ -13,16 +13,25 @@ class _FirstScreenState extends State<FirstScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body:  Center(
-        child: Column(children: [
-          ElevatedButton(onPressed: (){
-            context.go("/page2");
-          }, child: const Text("Sacond screen")),
-          ElevatedButton(onPressed: (){
-            context.go("/page3");
-          }, child: const Text("thirdScreen")),
-        ],)
+        child: Padding(
+          padding: const EdgeInsets.only(top: 50),
+          child: Column(children: [
+            ElevatedButton(onPressed: (){
+              context.go("/page2");
+            }, child: const Text("Sacond screen")),
+           const  SizedBox(height: 50,),
+            ElevatedButton(onPressed: (){
+              context.go("/page3");
+            }, child: const Text("thirdScreen")),
+            const  SizedBox(height: 50,),
+            ElevatedButton(onPressed: (){
+              context.go("/pa");
+            }, child: const Text("Page Not Found")),
+          ],),
+        )
       ),
       appBar: AppBar(
+        centerTitle: true,
         leading: IconButton(onPressed: (){
           context.go('/');
         },icon:const  Icon(Icons.arrow_back),),
