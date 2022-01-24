@@ -14,7 +14,7 @@ getRout() {
         child: Scaffold(
           appBar: AppBar(),
       body: const Center(
-        child: Text("Please Reload Your Page We Are Sorry"),
+        child: Text("Please close your page and tray agin"),
       ),
     )),
     initialLocation: homeScreen,
