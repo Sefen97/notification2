@@ -21,7 +21,7 @@ class _FirstScreenState extends State<FirstScreen> {
           children: [
             ElevatedButton(
                 onPressed: () {
-                  context.go("/page1/page2");
+                  context.push("/page2");
                 },
                 child: const Text("Sacond screen")),
             const SizedBox(
@@ -29,7 +29,7 @@ class _FirstScreenState extends State<FirstScreen> {
             ),
             ElevatedButton(
                 onPressed: () {
-                  context.go("/page3");
+                  context.push("/page3");
                 },
                 child: const Text("thirdScreen")),
             const SizedBox(
@@ -37,7 +37,7 @@ class _FirstScreenState extends State<FirstScreen> {
             ),
             ElevatedButton(
                 onPressed: () {
-                  context.go("/pa");
+                  context.push("/pa");
                 },
                 child: const Text("Page Not Found")),
           ],
@@ -45,12 +45,12 @@ class _FirstScreenState extends State<FirstScreen> {
       )),
       appBar: AppBar(
         centerTitle: true,
-        leading: IconButton(
-          onPressed: () {
-            context.pop();
-          },
-          icon: const Icon(Icons.arrow_back),
-        ),
+        // leading: IconButton(
+        //   onPressed: () {
+        //     context.pop();
+        //   },
+        //   icon: const Icon(Icons.arrow_back_ios),
+        // ),
         title: Text(widget.name.toString()),
       ),
     );

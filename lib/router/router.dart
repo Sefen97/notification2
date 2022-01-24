@@ -7,29 +7,30 @@ import 'package:navigator_2/screens/third_screen.dart';
 
 getRout() {
   final router = GoRouter(
-    errorPageBuilder: (context, state) => const MaterialPage(
+    errorPageBuilder: (context, state) =>  MaterialPage(
         child: Scaffold(
-      body: Center(
+          appBar: AppBar(),
+      body: const Center(
         child: Text("Please Reload Your Page We Are Sorry"),
       ),
     )),
     initialLocation: '/',
     routes: [
       GoRoute(
+        name: "/",
         path: '/',
         builder: (context, state) => const HomeScreen(),
-        routes: [
-          GoRoute(
-              path: 'page1',
-              builder: (context, state) => FirstScreen(
-                  name: state.extra != null ? state.extra! : "First Screen"),
-              routes: [
-                GoRoute(
-                  path: 'page2',
-                  builder: (context, state) => const SacondScreen(),
-                ),]
-          ),
-        ]
+      ),
+      GoRoute(
+        name: "page1",
+          path: '/page1',
+          builder: (context, state) => FirstScreen(
+              name: state.extra != null ? state.extra! : "First Screen"),
+
+      ),
+      GoRoute(
+        path: '/page2',
+        builder: (context, state) => const SacondScreen(),
       ),
 
       GoRoute(

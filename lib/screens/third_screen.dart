@@ -15,9 +15,6 @@ class _ThirdScreenState extends State<ThirdScreen> {
       body:  const Center(child:  Text("third screen")),
       appBar: AppBar(
         centerTitle: true,
-        leading: IconButton(onPressed: (){
-          context.go('/page2');
-        },icon:const  Icon(Icons.arrow_back),),
         title:const  Text("third screen"),
       ),
     );

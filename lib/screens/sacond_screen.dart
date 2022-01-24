@@ -15,9 +15,6 @@ class _SacondScreenState extends State<SacondScreen> {
       body:  const Center(child:  Text("Secondo screen")),
       appBar: AppBar(
         centerTitle: true,
-        leading: IconButton(onPressed: (){
-          context.pop();
-        },icon:const  Icon(Icons.arrow_back),),
         title:const  Text("seconds Screen"),
       ),
     );
