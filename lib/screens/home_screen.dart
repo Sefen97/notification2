@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:navigator_2/router/const_rout.dart';
+import 'package:navigator_2/router/router.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -18,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            context.go('/page1', extra: "First Screen");
+            context.push(firstScreen, extra: "First Screen");
           },
           child: const Text("First Screen "),
         ),

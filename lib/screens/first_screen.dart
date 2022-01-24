@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:navigator_2/router/const_rout.dart';
 
 class FirstScreen extends StatefulWidget {
   final Object name;
@@ -21,7 +22,7 @@ class _FirstScreenState extends State<FirstScreen> {
           children: [
             ElevatedButton(
                 onPressed: () {
-                  context.push("/page2");
+                  context.push(sacondScreen);
                 },
                 child: const Text("Sacond screen")),
             const SizedBox(
@@ -29,7 +30,7 @@ class _FirstScreenState extends State<FirstScreen> {
             ),
             ElevatedButton(
                 onPressed: () {
-                  context.push("/page3");
+                  context.go(thirdScreen);
                 },
                 child: const Text("thirdScreen")),
             const SizedBox(
