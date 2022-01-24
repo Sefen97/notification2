@@ -5,9 +5,8 @@ void main() {
   runApp(
     MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      routeInformationParser:getRout().routeInformationParser,
-      routerDelegate: getRout().routerDelegate,
-      title: "/",
+      routeInformationParser:getRout.routeInformationParser,
+      routerDelegate: getRout.routerDelegate,
     ),
   );
 }

@@ -8,8 +8,7 @@ import 'package:navigator_2/screens/third_screen.dart';
 
 
 
-getRout() {
-  final router = GoRouter(
+GoRouter getRout = GoRouter(
     errorPageBuilder: (context, state) =>  MaterialPage(
         child: Scaffold(
           appBar: AppBar(),
@@ -43,5 +42,4 @@ getRout() {
       ),
     ],
   );
-  return router;
-}
+

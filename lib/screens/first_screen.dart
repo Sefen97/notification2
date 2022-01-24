@@ -46,12 +46,6 @@ class _FirstScreenState extends State<FirstScreen> {
       )),
       appBar: AppBar(
         centerTitle: true,
-        // leading: IconButton(
-        //   onPressed: () {
-        //     context.pop();
-        //   },
-        //   icon: const Icon(Icons.arrow_back_ios),
-        // ),
         title: Text(widget.name.toString()),
       ),
     );
